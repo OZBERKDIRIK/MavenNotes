@@ -1,0 +1,94 @@
+   Maven Crash Course 
+		What is Maven ??? 
+			Maven developerlar tarafından proje inşa aracı (build tool) olarak adlandırılsa da , 
+			bundan daha fazla özelliğe sahiptir. 
+			
+			Proje yönetimi için kullanılmaktadır  Project Managment tool > Buildin toolu kapsamaktadır 
+			
+			Build şunları kapsamaktadır 
+				Compile
+					Elimizdeki kodu byte code çevrilmesi sağlanır 
+					
+				Run tests 
+					integration ve unit testlerin yürütülmesi sağlanır 
+					
+				Package Jar && Package War
+					Eğer core java dosyası ise jar olarak package olur . --- Package jar ---
+					Eğer  web uygulaması ise war olarak package olur .   --- Package war ---
+
+				Depoly to Server 
+					Servera deploy edilmesi 
+					Eğer geliştirdiğimiz web uygulaması ise , 
+					package war olarak elde ettiğmizi filesları ilgili servera aktarılması sağlanmış olunur
+					
+			
+			Bunlar apache ant ile birlikte her developerın kendi yazdığı xml scriptleri ile otomatikleştirilmek isteniyordu 
+			
+			Konfigurasyonlarda bir convention (gelenek / birlik) olması amacıyla , 
+			maven kullanılmaktdır 
+			
+			Maven 
+				convention of confugartion sağlar. 
+				
+				Proje belirli bir şablon altında başlatılır 
+				
+				src/main/java  ----> java kodları yer alır 
+				src/main/resource 
+				
+				src/test/java  ----> unit ve integration testler yer alır 
+				src/test/resource
+				
+			Maven birden fazla archetypesları vardır 
+			Bu archtypeslar kullanım amacına göre farklılık gösterir 
+				standalone
+				webapp
+				ear 
+				
+				vb. 
+				
+			IDE otomatik olarak arka planda seçilene göre mvn install çalıştırarak işleri kolaylaştırır 
+			
+			
+			mvn install 
+				projeyi maven olarak başlatır 
+				
+			mvn compile 
+				code'u byte code olarak dönüştürür 
+				
+			mvn run 
+				integration ve unit testleri çalıştırır 
+			
+			mvn package 
+				çalışılan projeye göre jar / war olarak paketleme gerçekleştirir 
+				
+			mvn deploy 
+				servera deploy edilir 
+				
+			
+			
+		
+		Why do we use maven ? 
+		
+			-Common interface 
+			-Dependency Management 
+			-Repository 
+			-Plugin
+		
+			Mavendan önce gerçekleştirilen projelerde , 
+			her projenin kendine ait bir build configurasyonu vardı 
+			XML configurasyon ---> Genelde apache ant ile oluşturuldu 
+			
+			
+			AMA 
+				maven ile birlikte artık common interface sağlandığı için 
+				tüm projeler aynı project structe ve configurasyona sahip oluyorlar 
+				
+				
+			Maven sadece bir build tool olarak kullanılmıyor aynı zamanda bir , 
+			bağımlılık yönteimi için de kullanılır 
+				Bu sayede proje içerisinde kullanılan yapıların bağımlılıkları yönetilebilir 
+			
+			Maven  yapılanların bir repository de saklanmasına olanak tanır 
+			
+			
+			Maven pluginlere sahip olduğu için otomasyonu sağlar 

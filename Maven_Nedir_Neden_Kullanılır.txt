@@ -92,3 +92,33 @@
 			
 			
 			Maven pluginlere sahip olduğu için otomasyonu sağlar 
+			
+			
+			
+			
+			--- Maven web app ile standalone java app ler için bir standart sunsada birbirleri arasında bazı farklılıklar vardır 
+				Kendileri arasında standart kesin olasa da birbirleri arasında farklılık vardır 
+				
+			-- Convenciton over Configuration 
+				Konfigurasyon değil gelenek/standart 
+				
+			-- Configuration over Convenciton 
+				Standart/Gelenek değil Konfigurasyon kullanılmaktadır 
+				
+			
+			Maven için önemli kavramlar 
+			Pluginler ile reuse edilir 
+				Oluşturulan maven plugin her proje için tekrar tekrar kullanılabilir 
+			Convention over configuration 
+				XML configurasyonun developerdan developara , projeden proje değişmemsei için , 
+				Apache ant'taki gibi olmaması adına , 
+				Bir standart sunmaktadır. 
+				Bir proje structre vardır 
+			common interface 
+				Bu proje structe her proje için aynıdır. 
+				
+			repository
+				oluşturulan projeler bir remote repoda tutur 
+				Bağımlıklar olduğun bu bağımlılıklar oradan yönetilebilir 
+				
+			
